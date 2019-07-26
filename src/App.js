@@ -4,10 +4,12 @@ import React from 'react';
 // import AppRouter from './components/AppRouter.js';
 // import CharacterCard from './components/CharacterCard.js';
 import CharacterList from './components/CharacterList.js';
+import LocationList from './components/LocationsList.js';
 
 export default function App() {
   return <main>
-    <CharacterList />
+    {/* <CharacterList /> */}
+    <LocationList />
     {/* <Header />
     <TabNav />
     <AppRouter /> */}

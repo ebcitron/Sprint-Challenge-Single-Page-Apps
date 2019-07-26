@@ -1,7 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-export default function LocationCard ({ name, type, dimension, residents }) {
-  // image={image}
-  return (<span>todo: location</span>
+import { List } from 'semantic-ui-react';
+
+function LocationCard ({place}) {
+
+  return (<span>
+    <List>
+    
+         <a href = {place.url} > <List.Item icon ='marker' content ={place.name} ></List.Item> </a>
+    </List>
+    </span>
   )
 }
+
+export default LocationCard;
