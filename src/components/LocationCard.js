@@ -27,7 +27,8 @@ function LocationCard ({place}) {
         </Card.Content>
         <Card.Content extra>
          <a>
-    
+          
+          {place.residents.length} Residents
          </a>
           
         </Card.Content>
