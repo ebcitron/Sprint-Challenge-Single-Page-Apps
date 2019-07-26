@@ -1,32 +1,36 @@
 import React from 'react';
+import locations from './LocationsList';
+import { Card, Icon, Image, Button } from 'semantic-ui-react';
 
-import { Card, Icon, Image } from 'semantic-ui-react';
-
-export default function CharacterCard ({id, name, species}) {
-  console.log("Card Props", {});
-  return (<span>{name}</span>)
-};
-// const CardExampleImageCard = () => (
-//   <Card>
-//     <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' wrapped ui={false} />
-//     <Card.Content>
-//       <Card.Header>Daniel</Card.Header>
-//       <Card.Meta>Joined in 2016</Card.Meta>
-//       <Card.Description>
-//         Daniel is a comedian living in Nashville.
-//       </Card.Description>
-//     </Card.Content>
-//     <Card.Content extra>
-//       <a>
-//         <Icon name='user' />
-//         10 Friends
-//       </a>
-//     </Card.Content>
-//   </Card>
-// )
-
-// export default CardExampleImageCard
-// }
-
-
+export default function CharacterCard ({char, key}, locations) {
+  console.log("Card Props", char);
+  console.log("Card Props Type", char.type);
+  return (
+    <Card>
+    <Image src={char.image} wrapped ui={false} />
+    <Card.Content>
+      <Card.Header>{char.name}</Card.Header>
+      <Card.Meta>Species: {char.species}</Card.Meta>
+      <Card.Meta>Status: {char.status}</Card.Meta>
+      <Card.Meta>Origin: {char.origin.name}</Card.Meta>
+      <Card.Meta>Location: <a href={char.location.url} >{char.location.name}</a> </Card.Meta>
+      {/* <Card.Meta>Locations: {locations.map(name => {
+        return (<p>{name}</p>)
+      })}</Card.Meta> */}
+            <Card.Description>
+        {char.type}
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='user' />
+       {/* <Image src={char.location.url}></Image>
+         */}
+      </a>
+      
+    </Card.Content>
+    
+  </Card>
+  );
+}
 
