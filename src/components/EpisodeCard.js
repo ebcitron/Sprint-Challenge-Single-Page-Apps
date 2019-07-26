@@ -5,9 +5,9 @@ import Axios from 'axios';
 
 
 
-function EpisodeCard ({place}) {
-  console.log("EpisodeCard Props", place);
-  console.log("EpisodeCard Props.name", place.name);
+function EpisodeCard ({episode}) {
+  console.log("EpisodeCard Props", episode);
+  console.log("EpisodeCard Props.name", episode.name);
  // const [img, setImg] = useState();
 
   // useEffect(()=> {
@@ -22,8 +22,9 @@ function EpisodeCard ({place}) {
         <Card>
       
         <Card.Content>
-          <Card.Header>Name: {place.name}</Card.Header>
-          <Card.Meta>Dimension: {place.dimension}</Card.Meta>
+          <Card.Header>{episode.name}</Card.Header>
+          <Card.Meta>{episode.episode}</Card.Meta>
+          <Card.Meta>Aired on: {episode.air_date}</Card.Meta>
         </Card.Content>
         <Card.Content extra>
          <a>

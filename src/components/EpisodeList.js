@@ -9,7 +9,7 @@ function EpisodeList() {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
     
     axios
-    .get("https://rickandmortyapi.com/api/episodes/")
+    .get("https://rickandmortyapi.com/api/episode/")
     .then( res=>{
       console.log("Res", res);
       setEpisodes(res.data.results)
@@ -20,7 +20,7 @@ function EpisodeList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
-  return <section className='location-list grid-view'>
+  return( <section className='location-list grid-view'>
 
       <h2>
         {Episodes.map((episode, index) => (
@@ -30,7 +30,7 @@ function EpisodeList() {
         )}
       </h2>
     </section>
-
+  )
 }
 
 export default EpisodeList;
