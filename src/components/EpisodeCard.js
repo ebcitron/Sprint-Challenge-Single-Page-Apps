@@ -5,9 +5,9 @@ import Axios from 'axios';
 
 
 
-function LocationCard ({place}) {
-  console.log("LocationCard Props", place);
-  console.log("LocationCard Props.name", place.name);
+function EpisodeCard ({place}) {
+  console.log("EpisodeCard Props", place);
+  console.log("EpisodeCard Props.name", place.name);
  // const [img, setImg] = useState();
 
   // useEffect(()=> {
@@ -38,4 +38,4 @@ function LocationCard ({place}) {
 
 
 }
-  export default LocationCard;
+  export default EpisodeCard;
