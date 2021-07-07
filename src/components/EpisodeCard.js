@@ -5,9 +5,9 @@ import Axios from 'axios';
 
 
 
-function LocationCard ({place}) {
-  console.log("LocationCard Props", place);
-  console.log("LocationCard Props.name", place.name);
+function EpisodeCard ({episode}) {
+  console.log("EpisodeCard Props", episode);
+  console.log("EpisodeCard Props.name", episode.name);
  // const [img, setImg] = useState();
 
   // useEffect(()=> {
@@ -22,13 +22,13 @@ function LocationCard ({place}) {
         <Card>
       
         <Card.Content>
-          <Card.Header>Name: {place.name}</Card.Header>
-          <Card.Meta>Dimension: {place.dimension}</Card.Meta>
+          <Card.Header>{episode.name}</Card.Header>
+          <Card.Meta>{episode.episode}</Card.Meta>
+          <Card.Meta>Aired on: {episode.air_date}</Card.Meta>
         </Card.Content>
         <Card.Content extra>
          <a>
-          
-          {place.residents.length} Residents
+    
          </a>
           
         </Card.Content>
@@ -39,4 +39,4 @@ function LocationCard ({place}) {
 
 
 }
-  export default LocationCard;
+  export default EpisodeCard;
